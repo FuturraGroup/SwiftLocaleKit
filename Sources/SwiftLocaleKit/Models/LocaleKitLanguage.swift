@@ -23,7 +23,7 @@ public struct LocaleKitLanguage: Equatable {
 	}
 
 	var currentLocaleName: String {
-		Locale.current.localizedString(forLanguageCode: code) ?? ""
+		LocaleKit.shared.currentLanguage.locale.localizedString(forLanguageCode: code) ?? ""
 	}
 }
 
