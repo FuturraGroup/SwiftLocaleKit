@@ -20,7 +20,7 @@ public let LocaleKitStorage = { () -> UserDefaults in
 	return UserDefaults(suiteName: localeKitBundleId) ?? UserDefaults.standard
 }()
 
-extension UserDefaults {
+public extension UserDefaults {
 	private(set) var systemLocaleUpdateDate: Date? {
 		get { self.value(forKey: lastUpdateSystemLocaleKey) as? Date }
 		set { self.set(newValue, forKey: lastUpdateSystemLocaleKey) }

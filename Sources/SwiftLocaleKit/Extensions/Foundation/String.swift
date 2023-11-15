@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension String {
+public extension String {
 	/// Localizing string to language provided `currentLanguage` value from `LocaleKit`.
 	/// Analog of `NSLocalizedString` mathod.
 	/// Can be called on any string.

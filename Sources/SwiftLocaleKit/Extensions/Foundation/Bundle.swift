@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Bundle {
+public extension Bundle {
 	/// Localized bundle with provided `currentLanguage` value from `LocaleKit`
 	static var localized: Bundle {
 		let langCode = LocaleKit.shared.currentLanguage.code
