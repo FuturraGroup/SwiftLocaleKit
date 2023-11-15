@@ -8,21 +8,21 @@
 import Foundation
 
 public struct LocaleKitLanguage: Equatable {
-	let code: String
+	public let code: String
 
-	var locale: Locale {
+	public var locale: Locale {
 		Locale(identifier: code)
 	}
 
-	var nativeName: String {
+	public var nativeName: String {
 		locale.localizedString(forLanguageCode: code) ?? ""
 	}
 
-	var deviceLocaleName: String {
+	public var deviceLocaleName: String {
 		Locale.current.localizedString(forLanguageCode: code) ?? ""
 	}
 
-	var currentLocaleName: String {
+	public var currentLocaleName: String {
 		LocaleKit.shared.currentLanguage.locale.localizedString(forLanguageCode: code) ?? ""
 	}
 }

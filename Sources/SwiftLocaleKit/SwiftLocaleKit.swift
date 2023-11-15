@@ -21,7 +21,7 @@ public final class LocaleKit {
 	}
 	
 	/// Current app localization
-	var currentLanguage: LocaleKitLanguage {
+	public var currentLanguage: LocaleKitLanguage {
 		var langCode = Locale.preferredLanguages.first ?? ""
 		if let appLocaleUpdateDate = LocaleKitStorage.appLocaleUpdateDate, let systemLocaleUpdateDate = LocaleKitStorage.systemLocaleUpdateDate, appLocaleUpdateDate > systemLocaleUpdateDate, let code = LocaleKitStorage.appLocaleCode {
 			langCode = code
@@ -33,17 +33,17 @@ public final class LocaleKit {
 	}
 	
 	/// Prefered languages by user's system settings
-	var preferedLanguages: [LocaleKitLanguage] {
+	public var preferedLanguages: [LocaleKitLanguage] {
 		Locale.preferredLanguages.map { LocaleKitLanguage(code: $0) }
 	}
 	
 	/// All supported languages by your application
-	var allSupportedLanguages: [LocaleKitLanguage] {
+	public var allSupportedLanguages: [LocaleKitLanguage] {
 		Bundle.main.localizations.map { LocaleKitLanguage(code: $0) }
 	}
 	
 	/// Sorted languages list in order: first `preferedLanguages`, than `allSupportedLanguages` with excluded languages from `preferedLanguages`
-	var sortedLanguages: [LocaleKitLanguage] {
+	public var sortedLanguages: [LocaleKitLanguage] {
 		var languages = preferedLanguages
 		
 		languages.append(contentsOf: allSupportedLanguages.reduce(into: []) { partialResult, language in
