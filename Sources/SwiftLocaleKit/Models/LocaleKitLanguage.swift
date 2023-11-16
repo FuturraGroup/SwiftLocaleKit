@@ -10,6 +10,10 @@ import Foundation
 public struct LocaleKitLanguage: Equatable {
 	public let code: String
 
+	public var shortCode: String {
+		return locale.languageCode ?? code
+	}
+
 	public var locale: Locale {
 		Locale(identifier: code)
 	}

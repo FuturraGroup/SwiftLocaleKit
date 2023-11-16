@@ -11,9 +11,14 @@ public extension Bundle {
 	/// Localized bundle with provided `currentLanguage` value from `LocaleKit`
 	static var localized: Bundle {
 		let langCode = LocaleKit.shared.currentLanguage.code
+		let shortLangCode = LocaleKit.shared.currentLanguage.shortCode
 
-		guard let path = Bundle.main.path(forResource: langCode, ofType: "lproj"), let localizedBundle = Bundle(path: path) else { return main }
+		if let path = Bundle.main.path(forResource: langCode, ofType: "lproj"), let localizedBundle = Bundle(path: path) {
+			return localizedBundle
+		} else if let path = Bundle.main.path(forResource: shortLangCode, ofType: "lproj"), let localizedBundle = Bundle(path: path) {
+			return localizedBundle
+		}
 
-		return localizedBundle
+		return main
 	}
 }

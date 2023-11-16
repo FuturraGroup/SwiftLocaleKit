@@ -44,10 +44,15 @@ public final class LocaleKit {
 	
 	/// Sorted languages list in order: first `preferedLanguages`, than `allSupportedLanguages` with excluded languages from `preferedLanguages`
 	public var sortedLanguages: [LocaleKitLanguage] {
-		var languages = preferedLanguages
+		let prefreredMapped = preferedLanguages.compactMap { lang in
+			allSupportedLanguages.contains(lang) || allSupportedLanguages.contains(where: { $0.code == lang.shortCode }) ? lang : nil
+		}
+		var languages: [LocaleKitLanguage] = prefreredMapped
 		
 		languages.append(contentsOf: allSupportedLanguages.reduce(into: []) { partialResult, language in
-			if !languages.contains(language) { partialResult.append(language) }
+			if !languages.contains(language), !prefreredMapped.contains(where: { $0 == language || $0.shortCode == $0.code }) {
+				partialResult.append(language)
+			}
 		})
 		
 		return languages
