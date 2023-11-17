@@ -19,17 +19,17 @@ public struct LocaleKitLanguage: Equatable {
 	}
 
 	/// Language name on it's native localization.
-	var nativeName: String {
+	public var nativeName: String {
 		name(for: code, in: locale)
 	}
 
 	/// Language name on curent device localization.
-	var deviceLocaleName: String {
+	public var deviceLocaleName: String {
 		name(for: code, in: Locale.current)
 	}
 
 	/// Language name on selected LocaleKit curent language.
-	var currentLocaleName: String {
+	public var currentLocaleName: String {
 		name(for: code, in: LocaleKit.shared.currentLanguage.locale)
 	}
 
