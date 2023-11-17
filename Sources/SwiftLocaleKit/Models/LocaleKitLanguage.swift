@@ -18,16 +18,35 @@ public struct LocaleKitLanguage: Equatable {
 		Locale(identifier: code)
 	}
 
-	public var nativeName: String {
-		locale.localizedString(forLanguageCode: code) ?? ""
+	/// Language name on it's native localization.
+	var nativeName: String {
+		name(for: code, in: locale)
 	}
 
-	public var deviceLocaleName: String {
-		Locale.current.localizedString(forLanguageCode: code) ?? ""
+	/// Language name on curent device localization.
+	var deviceLocaleName: String {
+		name(for: code, in: Locale.current)
 	}
 
-	public var currentLocaleName: String {
-		LocaleKit.shared.currentLanguage.locale.localizedString(forLanguageCode: code) ?? ""
+	/// Language name on selected LocaleKit curent language.
+	var currentLocaleName: String {
+		name(for: code, in: LocaleKit.shared.currentLanguage.locale)
+	}
+
+	private func name(for code: String, in locale: Locale) -> String {
+		let langLocale = Locale(identifier: code)
+		var codeToLocalize = code
+		if code == "zh-HK" {
+			codeToLocalize = "zh-Hant"
+		}
+
+		var name = locale.localizedString(forIdentifier: codeToLocalize)?.capitalized ?? ""
+
+		if langLocale.languageCode == "zh", let region = langLocale.regionCode, let regionName = locale.localizedString(forRegionCode: region)?.capitalized {
+			name += "\(name.isEmpty ? "" : " ")(\(regionName))"
+		}
+
+		return name
 	}
 }
 

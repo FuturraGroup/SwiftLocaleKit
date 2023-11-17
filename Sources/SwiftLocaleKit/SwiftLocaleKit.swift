@@ -50,7 +50,7 @@ public final class LocaleKit {
 		var languages: [LocaleKitLanguage] = prefreredMapped
 		
 		languages.append(contentsOf: allSupportedLanguages.reduce(into: []) { partialResult, language in
-			if !languages.contains(language), !prefreredMapped.contains(where: { $0 == language || $0.shortCode == $0.code }) {
+			if !languages.contains(language), !prefreredMapped.contains(where: { $0 == language || (language.shortCode == language.code && language.shortCode == $0.shortCode) }) {
 				partialResult.append(language)
 			}
 		})
