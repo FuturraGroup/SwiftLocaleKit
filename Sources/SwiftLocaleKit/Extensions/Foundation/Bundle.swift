@@ -21,4 +21,18 @@ public extension Bundle {
 
 		return main
 	}
+
+	/// Localized bundle with provided  custom `language` of type `LocaleKitLanguage`
+	static func localized(with language: LocaleKitLanguage) -> Bundle {
+		let langCode = language.code
+		let shortLangCode = language.shortCode
+
+		if let path = Bundle.main.path(forResource: langCode, ofType: "lproj"), let localizedBundle = Bundle(path: path) {
+			return localizedBundle
+		} else if let path = Bundle.main.path(forResource: shortLangCode, ofType: "lproj"), let localizedBundle = Bundle(path: path) {
+			return localizedBundle
+		}
+
+		return main
+	}
 }

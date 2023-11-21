@@ -23,4 +23,11 @@ public extension String {
 	var localized: String {
 		return NSLocalizedString(self, bundle: Bundle.localized, comment: "")
 	}
+
+	/// Simplified verion of function `localized`. Using all default parameters of `NSLocalizedString` except of required.
+	/// - Parameters:
+	///   - language: Custom language for localization of type `LocaleKitLanguage`
+	func localized(_ language: LocaleKitLanguage) -> String {
+		return NSLocalizedString(self, bundle: Bundle.localized(with: language), comment: "")
+	}
 }
