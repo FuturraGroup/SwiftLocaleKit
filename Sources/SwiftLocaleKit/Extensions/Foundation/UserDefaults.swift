@@ -13,6 +13,8 @@ private let systemLocaleKey: String = "locale.kit.key.systemLocaleKey"
 private let lastUpdateAppLocaleKey: String = "locale.kit.key.lastUpdateAppLocaleKey"
 private let appLocaleKey: String = "locale.kit.key.appLocaleKey"
 
+@available(swift 5.5)
+@available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
 public let LocaleKitStorage = { () -> UserDefaults in
 	var localeKitBundleId = Bundle.main.bundleIdentifier ?? "locale.kit.lib"
 	localeKitBundleId += ".storage"
@@ -20,6 +22,8 @@ public let LocaleKitStorage = { () -> UserDefaults in
 	return UserDefaults(suiteName: localeKitBundleId) ?? UserDefaults.standard
 }()
 
+@available(swift 5.5)
+@available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
 public extension UserDefaults {
 	private(set) var systemLocaleUpdateDate: Date? {
 		get { self.value(forKey: lastUpdateSystemLocaleKey) as? Date }

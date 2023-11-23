@@ -3,6 +3,8 @@
 
 import Foundation
 
+@available(swift 5.5)
+@available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
 public final class LocaleKit {
 	public static let shared = LocaleKit()
 	
@@ -59,6 +61,8 @@ public final class LocaleKit {
 	}
 }
 
+@available(swift 5.5)
+@available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
 public extension LocaleKit {
 	/// Changes current localization language value
 	///

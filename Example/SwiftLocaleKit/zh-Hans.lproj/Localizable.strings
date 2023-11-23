@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  SwiftLocaleKit
+
+  Created by Kyrylo Mukha on 23.11.2023.
+  Copyright © 2023 CocoaPods. All rights reserved.
+*/
+
+
+"example_string_1" = "您好，这是翻译的测试字符串。";
+"example_string_2" = "我希望您会喜欢使用这个库。";
+"example_string_3" = "这是使用库的示例。";

@@ -1,0 +1,16 @@
+PODS:
+  - SwiftLocaleKit (1.4.0)
+
+DEPENDENCIES:
+  - SwiftLocaleKit (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftLocaleKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftLocaleKit: b891a0e55150211f2e9fa267fbcf2e022a799876
+
+PODFILE CHECKSUM: a6589ac6303cf507ca053f93b3966f68112e8030
+
+COCOAPODS: 1.12.1

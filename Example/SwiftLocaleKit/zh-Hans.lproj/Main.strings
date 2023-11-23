@@ -1,0 +1,27 @@
+
+/* Class = "UINavigationItem"; title = "Change Locale"; ObjectID = "0Pa-Ds-3yK"; */
+"0Pa-Ds-3yK.title" = "Change Locale";
+
+/* Class = "UILabel"; text = "Current Language:"; ObjectID = "Gf9-TC-ggI"; */
+"Gf9-TC-ggI.text" = "Current Language:";
+
+/* Class = "UILabel"; text = "Example translate 1:"; ObjectID = "QRo-5m-ahL"; */
+"QRo-5m-ahL.text" = "Example translate 1:";
+
+/* Class = "UILabel"; text = "Example translate 2:"; ObjectID = "WXB-Xk-udq"; */
+"WXB-Xk-udq.text" = "Example translate 2:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "j51-g4-kbz"; */
+"j51-g4-kbz.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "lYB-lC-E8A"; */
+"lYB-lC-E8A.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mh1-xq-yct"; */
+"mh1-xq-yct.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Change Locale"; ObjectID = "wl2-k7-mlI"; */
+"wl2-k7-mlI.configuration.title" = "Change Locale";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "wl2-k7-mlI"; */
+"wl2-k7-mlI.normalTitle" = "Button";

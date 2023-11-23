@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  SwiftLocaleKit
+
+  Created by Kyrylo Mukha on 23.11.2023.
+  Copyright © 2023 CocoaPods. All rights reserved.
+*/
+
+
+"example_string_1" = "Hello, this is test string for translation.";
+"example_string_2" = "I hope you'll enjoy using this library.";
+"example_string_3" = "This is example of using library.";

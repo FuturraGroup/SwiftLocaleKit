@@ -7,6 +7,8 @@
 
 import Foundation
 
+@available(swift 5.5)
+@available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
 public extension Bundle {
 	/// Localized bundle with provided `currentLanguage` value from `LocaleKit`
 	static var localized: Bundle {
