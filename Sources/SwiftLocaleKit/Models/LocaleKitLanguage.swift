@@ -8,7 +8,7 @@
 import Foundation
 
 @available(swift 5.5)
-@available(macOS 10.15, iOS 13, watchOS 6, tvOS 13, *)
+@available(macOS 10.15, iOS 12, watchOS 6, tvOS 13, *)
 public struct LocaleKitLanguage: Equatable {
 	public let code: String
 

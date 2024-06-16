@@ -7,7 +7,7 @@ let package = Package(
 	name: "SwiftLocaleKit",
 	platforms: [
 		.macOS(.v10_15),
-		.iOS(.v13),
+		.iOS(.v12),
 		.watchOS(.v6),
 		.tvOS(.v13)
 	],
