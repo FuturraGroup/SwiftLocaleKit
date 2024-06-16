@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftLocaleKit'
-  s.version          = '1.5.1'
+  s.version          = '1.5.3'
   s.summary          = 'The SwiftLocaleKit is libriry for simlify localization and synchronize it with system localization settings and synchronize them'
 
   s.description      = <<-DESC
