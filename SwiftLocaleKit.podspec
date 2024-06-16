@@ -20,7 +20,7 @@ The SwiftLocaleKit is libriry for simlify localization and synchronize it with s
   s.author           = { 'Kyrylo Mukha' => 'kyrylo.mukha@icloud.com' }
   s.source           = { :git => 'https://github.com/FuturraGroup/SwiftLocaleKit.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '13.0'
+  s.ios.deployment_target = '12.0'
   s.swift_version = "5.5"
 
   s.source_files = 'Sources/SwiftLocaleKit/**/*.{swift}'
